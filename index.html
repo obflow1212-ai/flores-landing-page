@@ -333,11 +333,7 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
 <section class="form-section" id="offer-form">
   <div class="wrap">
     <div class="form-card">
-      <form id="leadForm" action="https://formspree.io/f/xbdvngol" method="POST" novalidate>
-        <!-- Formspree settings -->
-        <input type="hidden" name="_subject" value="New Seller Lead — Flores Property Solutions">
-        <!-- Honeypot: hidden from humans, catches bots -->
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <form id="leadForm" novalidate>
 
         <div class="form-head">
           <h2>Get your free cash offer</h2>
@@ -346,17 +342,17 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
 
         <div class="field" id="f-address">
           <label class="flabel" for="address">Property address <span class="req">*</span></label>
-          <input type="text" id="address" name="Property Address" autocomplete="street-address" placeholder="123 Main St, City, State ZIP" required>
+          <input type="text" id="address" name="address" autocomplete="street-address" placeholder="123 Main St, City, State ZIP" required>
           <div class="err">Please enter the property address.</div>
         </div>
 
         <fieldset id="f-condition">
           <legend>Current condition of the property <span class="req">*</span></legend>
           <div class="options">
-            <label class="option"><input type="radio" name="Property Condition" value="Good" required>Good</label>
-            <label class="option"><input type="radio" name="Property Condition" value="Fair">Fair</label>
-            <label class="option"><input type="radio" name="Property Condition" value="Needs Work">Needs work</label>
-            <label class="option"><input type="radio" name="Property Condition" value="Tear Down">Tear down</label>
+            <label class="option"><input type="radio" name="property_condition" value="Good" required>Good</label>
+            <label class="option"><input type="radio" name="property_condition" value="Fair">Fair</label>
+            <label class="option"><input type="radio" name="property_condition" value="Needs Work">Needs work</label>
+            <label class="option"><input type="radio" name="property_condition" value="Tear Down">Tear down</label>
           </div>
           <div class="err">Please select the property condition.</div>
         </fieldset>
@@ -364,9 +360,9 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
         <fieldset id="f-goal">
           <legend>Your primary goal for the property <span class="req">*</span></legend>
           <div class="options one">
-            <label class="option"><input type="radio" name="Primary Goal" value="Sell quickly" required>Sell quickly</label>
-            <label class="option"><input type="radio" name="Primary Goal" value="Sell with repairs">Sell w/ repairs</label>
-            <label class="option"><input type="radio" name="Primary Goal" value="Explore options">Explore options</label>
+            <label class="option"><input type="radio" name="primary_goal" value="Sell quickly" required>Sell quickly</label>
+            <label class="option"><input type="radio" name="primary_goal" value="Sell with repairs">Sell w/ repairs</label>
+            <label class="option"><input type="radio" name="primary_goal" value="Explore options">Explore options</label>
           </div>
           <div class="err">Please select your primary goal.</div>
         </fieldset>
@@ -374,9 +370,9 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
         <fieldset id="f-mortgage">
           <legend>Estimated mortgage balance <span class="req">*</span></legend>
           <div class="options one">
-            <label class="option"><input type="radio" name="Mortgage Balance" value="Under $100k" required>Under $100k</label>
-            <label class="option"><input type="radio" name="Mortgage Balance" value="$100k-$300k">$100k&ndash;$300k</label>
-            <label class="option"><input type="radio" name="Mortgage Balance" value="$300k+">$300k+</label>
+            <label class="option"><input type="radio" name="mortgage_balance" value="Under $100k" required>Under $100k</label>
+            <label class="option"><input type="radio" name="mortgage_balance" value="$100k-$300k">$100k&ndash;$300k</label>
+            <label class="option"><input type="radio" name="mortgage_balance" value="$300k+">$300k+</label>
           </div>
           <div class="err">Please select an estimated balance.</div>
         </fieldset>
@@ -384,17 +380,17 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
         <fieldset id="f-net">
           <legend>Desired net amount from the sale <span class="req">*</span></legend>
           <div class="options">
-            <label class="option"><input type="radio" name="Desired Net Amount" value="Less than $50k" required>Less than $50k</label>
-            <label class="option"><input type="radio" name="Desired Net Amount" value="$50k-$150k">$50k&ndash;$150k</label>
-            <label class="option"><input type="radio" name="Desired Net Amount" value="$150k-$300k">$150k&ndash;$300k</label>
-            <label class="option"><input type="radio" name="Desired Net Amount" value="$300k+">$300k+</label>
+            <label class="option"><input type="radio" name="desired_net_amount" value="Less than $50k" required>Less than $50k</label>
+            <label class="option"><input type="radio" name="desired_net_amount" value="$50k-$150k">$50k&ndash;$150k</label>
+            <label class="option"><input type="radio" name="desired_net_amount" value="$150k-$300k">$150k&ndash;$300k</label>
+            <label class="option"><input type="radio" name="desired_net_amount" value="$300k+">$300k+</label>
           </div>
           <div class="err">Please select a desired net amount.</div>
         </fieldset>
 
         <div class="field" id="f-name">
           <label class="flabel" for="fullname">Full name <span class="req">*</span></label>
-          <input type="text" id="fullname" name="Full Name" autocomplete="name" placeholder="Your full name" required>
+          <input type="text" id="fullname" name="full_name" autocomplete="name" placeholder="Your full name" required>
           <div class="err">Please enter your name.</div>
         </div>
 
@@ -406,7 +402,7 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
           </div>
           <div class="field" id="f-phone">
             <label class="flabel" for="phone">Phone number <span class="req">*</span></label>
-            <input type="tel" id="phone" name="Phone Number" autocomplete="tel" placeholder="(555) 555-5555" required>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555" required>
             <div class="err">Please enter a valid phone number.</div>
           </div>
         </div>
@@ -417,10 +413,9 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
         </label>
         <div class="err" id="consent-err" style="margin-top:-10px;margin-bottom:14px">Please agree to be contacted to continue.</div>
         <!-- Record of consent included in the lead email -->
-        <input type="hidden" name="Contact Consent" id="consentRecord" value="">
+        <input type="hidden" name="consent_record" id="consentRecord" value="">
 
-        <button type="submit" class="cta submit" id="submitBtn">Get My Offer</button>
-        <div class="senderr" id="sendErr">Something went wrong sending your request. Please try again, or call us directly.</div>
+        <button type="button" class="cta submit" id="submitBtn">Get My Offer</button>
         <p class="micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Your information is private and never sold.</p>
       </form>
 
@@ -490,21 +485,15 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
     });
   });
 
-  // form validation + async Formspree submission (user stays on this page)
+  // form validation + CRM submission capture (LeadConnector external tracking)
   var form = document.getElementById('leadForm');
   var submitBtn = document.getElementById('submitBtn');
-  var sendErr = document.getElementById('sendErr');
+  var validated = false;
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    sendErr.classList.remove('show');
-    sendErr.style.display = '';
-
-    // ---- validation (keeps junk leads out of your inbox) ----
+  function validateForm(){
     var ok = true;
     function fail(id){var el=document.getElementById(id);if(el){el.classList.add('invalid');ok=false;}}
     function clear(id){var el=document.getElementById(id);if(el){el.classList.remove('invalid');}}
-
     [['address','f-address'],['fullname','f-name']].forEach(function(p){clear(p[1]);if(!document.getElementById(p[0]).value.trim())fail(p[1]);});
     clear('f-email');
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value.trim()))fail('f-email');
@@ -517,43 +506,37 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
     });
     var cErr=document.getElementById('consent-err');cErr.style.display='none';
     if(!document.getElementById('consent').checked){cErr.style.display='block';ok=false;}
+    return ok;
+  }
 
-    if(!ok){
+  submitBtn.addEventListener('click', function(){
+    if(!validateForm()){
       var f=document.querySelector('.invalid');
       if(f)f.scrollIntoView({behavior:'smooth',block:'center'});
       return;
     }
-
-    // stamp consent into the lead email
+    // stamp consent into the submission
     document.getElementById('consentRecord').value =
       'Agreed to be contacted by phone, text, and email — ' + new Date().toISOString();
-
-    // ---- submission ----
+    validated = true;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
+    // fire a real submit event: the LeadConnector tracking script reads it and sends the lead to the CRM
+    if(form.requestSubmit){form.requestSubmit();}
+    else{form.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}));}
+  });
 
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(function(res) {
-      if (res.ok) {
-        form.style.display = 'none';
-        var successMsg = document.getElementById('successMsg');
-        successMsg.style.display = 'block';
-        successMsg.classList.add('show');
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        fbq('track', 'Lead');
-        updateSticky();
-      } else {
-        throw new Error('Submission failed');
-      }
-    }).catch(function() {
-      sendErr.style.display = 'block';
-      sendErr.classList.add('show');
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Get My Offer';
-    });
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); // stop page navigation; the tracking script has already read this event
+    if(!validated){return;} // ignore submits that didn't pass validation (e.g. stray Enter key)
+    validated = false;
+    var successMsg = document.getElementById('successMsg');
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+    successMsg.classList.add('show');
+    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    fbq('track', 'Lead');
+    updateSticky();
   });
 
   // sticky CTA: hidden over hero / form / footer, and after submit
@@ -572,6 +555,11 @@ src="https://www.facebook.com/tr?id=2311045116386913&ev=PageView&noscript=1"
     },{threshold:0.02});
     watch.forEach(function(el){if(el)io.observe(el);});
   }
+</script>
+<!-- LeadConnector external tracking: captures form submissions into the CRM -->
+<script 
+  src="https://link.msgsndr.com/js/external-tracking.js"
+  data-tracking-id="tk_37aabf2d7b414e10876c0c386361df97">
 </script>
 </body>
 </html>
