@@ -378,10 +378,9 @@ Call Us
 </div>
 </div>
 <label class="consent">
-<input type="checkbox" id="consent" required>
+<input type="checkbox" id="consent">
 <span>By checking this box, I agree that Flores Property Solutions OC, LLC may contact me by phone, text, and email about my property. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for help. Consent is not a condition of any purchase. See our <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
 </label>
-<div class="err" id="consent-err" style="margin-top:-10px;margin-bottom:14px">Please agree to be contacted to continue.</div>
 <!-- Record of consent included in the lead email -->
 <input type="hidden" name="consent_record" id="consentRecord" value="">
 <button type="button" class="cta submit" id="submitBtn">Get My Offer</button>
@@ -460,8 +459,6 @@ clear(fid);
 var fs=document.getElementById(fid);
 if(!fs.querySelector('input[type=radio]:checked'))fail(fid);
 });
-var cErr=document.getElementById('consent-err');cErr.style.display='none';
-if(!document.getElementById('consent').checked){cErr.style.display='block';ok=false;}
 return ok;
 }
 submitBtn.addEventListener('click', function(){
@@ -471,8 +468,11 @@ if(f)f.scrollIntoView({behavior:'smooth',block:'center'});
 return;
 }
 // stamp consent into the submission
-document.getElementById('consentRecord').value =
-'Agreed to be contacted by phone, text, and email — ' + new Date().toISOString();
+if(document.getElementById('consent').checked) {
+  document.getElementById('consentRecord').value = 'Agreed to be contacted by phone, text, and email — ' + new Date().toISOString();
+} else {
+  document.getElementById('consentRecord').value = 'Opted OUT of SMS/Email marketing.';
+}
 validated = true;
 submitBtn.disabled = true;
 submitBtn.textContent = 'Sending...';
